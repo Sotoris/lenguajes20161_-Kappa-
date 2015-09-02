@@ -1,7 +1,5 @@
 #lang plai
 
-(print-only-errors false)
-
 ; Garcia Garcia Raul Eduerado
 ; Rivera Mercado Sergio
 ; Rivera Sotomayor Luis Rafael
@@ -205,4 +203,3 @@
 (test (mpowerset '()) '(()))
 (test (mpowerset '(1)) '(() (1)))
 (test (mpowerset '(1 2)) '(() (1) (2) (1 2)))
-(test (mpowerset '(1 2 3)) '(() (1) (2) (3) (1 2) (1 3) (2 3) (1 2 3)))
