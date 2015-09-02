@@ -69,7 +69,10 @@
          (cons (car l) (mfilter λ (cdr l)))
          (mfilter λ (cdr l)))))
 
-;any?
+; Función que recibe un predicado y una lista
+; que debe regresa #t cuando por lo menos hay 
+; un elemento en la lista, regresara #f En caso
+; contrario
 (define (any?number? lst)
   (cond
 [(empty? lst) #f ]
@@ -88,7 +91,10 @@
 (any?symbol? '(a b c))
 (any?number? '(a b c))
 
-;every?
+; Función que recibe un predicado y una lista
+; que debe regresa #t cuando el contenido de  
+; la lista son elemento, regresara #f En caso
+; contrario
 (define (every?number? lst)
   (cond
 [(empty? lst) #t ]
@@ -107,7 +113,9 @@
 (symbol? '(a b c))
 (every?symbol? '(1 2 3))
 
-;mpowerset
+; Función que recibe una lista
+; y regresa el conjunto potencia
+; de la original.
 (define (mpowerset lst)
   (if (null? lst)
       '(())
@@ -199,7 +207,6 @@
 (test (every?symbol? '(1 2 3 a)) #f)
 
 ;mpowerset
-
 (test (mpowerset '()) '(()))
 (test (mpowerset '(1)) '(() (1)))
 (test (mpowerset '(1 2)) '(() (1) (2) (1 2)))
