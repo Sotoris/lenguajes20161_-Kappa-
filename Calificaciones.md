@@ -21,3 +21,9 @@ Les falto implementar las funciones create-trackpoints, total-distance,
 average-hr, max-hr y collapse-trackpoins.
 
 **Calificación: 6**
+
+## Tareas
+
+### Tarea 2
+
+**Calificación: 0**
