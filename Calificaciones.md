@@ -24,6 +24,14 @@ average-hr, max-hr y collapse-trackpoins.
 
 ## Tareas
 
+### Tarea 1
+Problema I: No respondieron porque no es lineal usando stack,
+sus respuestas son parciales.
+Problema II: Bien.
+Problema III: No respondieron.
+
+**Calificación: 4**
+
 ### Tarea 2
 
 **Calificación: 0**
