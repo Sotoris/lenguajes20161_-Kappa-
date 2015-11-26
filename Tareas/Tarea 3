@@ -1,0 +1,82 @@
+1.-
+(define empty ?
+( lambda (l)
+(if (zero?(length l))
+True
+False)))
+Г├ l: list
+Г├ (length(list<- num))
+Г├(length l): num
+Г├(zero?(length l)):bool Г├True:bool Г├False:bool
+(define fib
+(lambda (n)
+(cond
+[(zero?n) 1]
+[( = n 1) 1]
+[ (+( fib(- n 1)) (fib (- n 2)))])))
+Г├n:num Г├n:num Г├1:num
+Г├ (zero?n):bool Г├1:number Г├(- n 1):bool Г├1:num Г├(+…): number
+Г(n<-number) ├(cond[…]): number
+Г(fib<-number) ├((lambda(n:number)): number (cond[…])):number->number
+2.- Tenemos las siguientes restricciones
+[[ 1 ]]=(+ 1 ( first (cons true empty))) → [[ 2 ]]
+[[ 1 ]]→ number
+[[ 2 ]]=(first (cons true empty))→ [[ 3 ]]
+[[ 3 ]]= (cons ( true empty))
+Pero [ true] = Boolean !
+Ya que [[ 1 ]] es number por la definición de + por lo cual la expresión [[ 1 ]] no puede sumar
+boolean y number. Eso por un erro de tipos.
+3.-
+[[ 1 ]] = (fun (f : (1) : (2
+(fun (x: (3) : (4
+(fun (y : (5) : (6
+(cons x (f(f y)))))) → [[ 2 ]]
+[[ 2 ]]= (fun (x: (3) : (4
+(fun (y : (5) : (6
+(cons x (f(f y))))) → [[ 3 ]]
+[[ 3 ]]= (fun (y : (5) : (6
+(cons x (f(f y)))) → [[ 4 ]]
+[[ 4 ]] =(cons x (f(f y)))
+por 𝑓𝑦→ [ f ]= type(y)
+por [[ 4 ]]→[[𝐶6]]=y
+En [[ 3 ]] por [[ 4 ]] y por el juicio de tipos en funciones
+[[ 𝐶5 ]]→ y
+Entonces [y]=type(y)
+Cómo [[ 2 ]]→[[ 3 ]] entonces [[ 𝐶4 ]]= type(y)
+Por juicio de tipo en funciones:
+[[ 𝐶4 ]]→x y x=type(y)
+Por ultimo por juicio de tipo en [[ 1 ]]
+[[ 1 ]]→ type(y) ya que 𝐶2=type(x)=type(y)
+4.- No cambian por que sirven para revisar que los tipos sean correctos en la función.
+5.-
+Explícito:
+Ventajas
+Buen mantenimiento y reutilización de código.
+Desventajas:
+Código extenso, el tipo de las referencias dan muchos limitantes y las variables a las que se pueden
+acceder.
+Implícito:
+Ventajas:
+Poco código y no necesita un cast explicito.
+Desventajas:
+Se puede llegar a desconocer el tipo y pueden salir incongruencias.
+6.-
+General
+Ventajas:
+Posee bibliotecas
+Puede usarse para distintos problemas
+Pueden hallarse múltiples soluciones
+Desventajas:
+Soluciones poco eficaces o difíciles de comprender.
+Específico:
+Ventajas:
+Soluciones optimas
+Fácil de intuir
+Soluciones menos complejas
+Desventajas:
+Fuera de su dominio es inútil.
+Ejemplos:
+C no es eficaz con objetos, pues no posee orientación a estos. #include <stdio.h> int main() { int c, n, fact = 1; printf("Enter a number to calculate it's factorial\n"); scanf("%d", &n); for (c = 1; c <= n; c++) fact = fact * c; printf("Factorial of %d = %d\n", n, fact); return 0; }
+Haskell se limita a ser un programa lógico. factorial 0 = 1 factorial n = n * factorial (n - 1)
+Sql a modelar y trabajar con bases de datos.
+Select fact From factorial where nidfact=0
