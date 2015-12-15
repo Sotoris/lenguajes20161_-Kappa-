@@ -26,6 +26,14 @@ average-hr, max-hr y collapse-trackpoins.
 
 **Calificación: 0**
 
+### Practica 5
+
+**Calificación: 0**
+
+### Practica 6
+
+**Calificación: 0**
+
 ## Tareas
 
 ### Tarea 1
@@ -37,5 +45,9 @@ Problema III: No respondieron.
 **Calificación: 4**
 
 ### Tarea 2
+
+**Calificación: 0**
+
+### Tarea 3
 
 **Calificación: 0**
